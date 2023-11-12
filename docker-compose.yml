@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   app:
-    container_name: contenedor_php
+    container_name: php
     image: bitfran/bookmedik
     restart: always
     environment:
@@ -14,7 +14,7 @@ services:
     depends_on:
       - db
   db:
-    container_name: servidor_mysql
+    container_name: mariadb
     image: mariadb
     restart: always
     environment:
